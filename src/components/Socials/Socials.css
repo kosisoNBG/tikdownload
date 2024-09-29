@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+  }
+  
+  /* body{
+    height: 200vh;
+  } */
+  
+  .shareit {
+    position: fixed;
+    top: 150px;
+  }
+  
+  .shareit a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+      opacity: 0.75;
+      transition: opacity 0.15s linear;
+    text-decoration: none;
+  }
+  
+  .shareit a:hover {
+      opacity: 1;
+  }
+  
+  .facebook {
+       background: #3b5998;
+  }
+  
+  .twitter {
+        background: #55acee;
+  }
+  
+  .linkedin {
+    background: #0077b5;
+  }
+  
+  .reddit {
+        background: #FF4500;
+  }
+  
+  .tumblr {
+        background: #000000;
+  }
+  
+  .pinterest {
+        background: #cb2027;
+  }
