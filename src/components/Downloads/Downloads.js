@@ -18,7 +18,7 @@ const Downloads = ({ result }) => {
     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div className='col-md-6 download-con'>
-        <span className='row '>
+        <span className='row'>
     <a href="#" className="btn btn-primary mb-2">Download</a>
     <a href="#" className="btn btn-primary mb-2 btn-success">Download Server 02</a>
     <a href="#" className="btn btn-primary btn-secondary">Download Another video</a>
@@ -42,11 +42,3 @@ const Downloads = ({ result }) => {
 }
 
 export default Downloads
-
-
-// test url
-// https://vm.tiktok.com/ZMrts1wry/
-
-httrack http://preview.codecanyon.net/item/tiktok-video-downloader-without-watermark-audio-and-image-extractor/full_screen_preview/49671147?_ga=2.196435493.827563292.1727136123-1669973944.1727136123 -O /tmp/tiktoktheme
-
-wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://preview.codecanyon.net/item/tiktok-video-downloader-without-watermark-audio-and-image-extractor/full_screen_preview/49671147?_ga=2.196435493.827563292.1727136123-1669973944.1727136123

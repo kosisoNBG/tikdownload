@@ -1,28 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer/Footer';
 import VideoDownload from './components/VideoDownload/VideoDownload';
+import SlidesDownload from './components/SlidesDownload/SlidesDownload';
+import Mp3Download from './components/Mp3Download/Mp3Download';
 import Faq from './components/Faq';
-import Main from './components/Contents/Main';
+// import Main from './components/Contents/Main';
 
 function App() {
   return (
+      <Router>
     <div className="App">
       <Header />
-      <div className="container bg-primary text-white" style={{ padding: '20px', borderRadius: '5px' }}>
-        <h1 className="text-center">Tiktok Video Downloader</h1>
-        <h3 className="text-center">Download and Save TikTok Videos Without Watermark.</h3>
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <VideoDownload />
-          </div>
-        </div>
-      </div>
-      <Main />
+      <Routes>
+        <Route path="/" element={<VideoDownload />} />
+        <Route path="/tiktok-slides-downloader" element={<SlidesDownload />} />
+        <Route path="/tiktok-mp3-downloader" element={<Mp3Download />} />
+      </Routes>
+      {/* <Main /> */}
       <Faq />
       <Footer />
     </div>
+    </Router>
   );
 }
 
