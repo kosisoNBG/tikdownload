@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './InlineNav.css';
 
 const InlineNav = () => {
@@ -6,10 +7,10 @@ const InlineNav = () => {
 
   // Links you want to display
   const links = [
-    // { name: 'Home', href: '#home' },
-    { name: 'Tiksave Video Downloader', href: '/' },
-    { name: 'Photo Downloader', href: '/tiktok-slides-downloader' },
-    { name: 'Mp3 Downloader', href: '/tiktok-mp3-downloader' },
+    // { name: 'Home', to: '#home' },
+    { name: 'Tiksave Video Downloader', to: '/' },
+    { name: 'Photo Downloader', to: '/tiktok-slides-downloader' },
+    { name: 'Mp3 Downloader', to: '/tiktok-mp3-downloader' },
   ];
 
   // Function to handle click event
@@ -20,15 +21,15 @@ const InlineNav = () => {
     <div>
       <nav className="link-group nav justify-content-center">
         {links.map((link) => (
-          <a
+          <Link
             key={link.name}
-            href={link.href}
+            to={link.to}
             className={` link-underline-warning link ${activeLink === link.name ? 'active' : ''}`}
             onClick={() => handleLinkClick(link.name)}
           >
             {link.name}
             <span className='fa fa-link'></span>
-          </a>
+          </Link>
         ))}
       </nav>
     </div>

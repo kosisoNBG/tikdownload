@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import './SlidesDownload.css';
 import ArticleSlides from './ArticleSlides';
 import InlineNav from '../InlineNav/InlineNav';
@@ -70,11 +71,31 @@ const SlidesDownload = () => {
   };
 
   return (
+    
     <div>
-
+    <Helmet>
+      <title>Tiktok Slideshow Downloader | Download TikTok Slideshow hd no Watermarks</title>
+    <meta name="description" content="Discover the best TikTok slideshow downloader tools to save stunning HD slideshows without watermarks. Learn how to download TikTok slideshows as videos and enhance your content." />
+    <meta name="keywords" content="TikTok slideshow downloader, TikTok downloader slideshow, TikTok slideshow downloader HD, TikTok photo slideshow downloader HD, TikTok slideshow downloaded, TikTok slideshow download, TikTok slideshow to video downloader, TikTok slideshow downloader no watermark, TikTok slideshow downloader as video" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourwebsite.com/" />
+    
+     {/* Open Graph Meta Tags  */}
+    <meta property="og:title" content="Tiktok Slideshow Downloader | Download TikTok Slideshow hd no Watermarks" />
+    <meta property="og:description" content="Discover the best TikTok slideshow downloader tools to save stunning HD slideshows without watermarks. Learn how to download TikTok slideshows as videos and enhance your content." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    
+     {/* Twitter Meta Tags  */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tiktok Slideshow Downloader | Download TikTok Slideshow hd no Watermarks" />
+    <meta name="twitter:description" content="Discover the best TikTok slideshow downloader tools to save stunning HD slideshows without watermarks. Learn how to download TikTok slideshows as videos and enhance your content." />
+    <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg" />
+    </Helmet>
     <div className="container bg-primary text-white" style={{ padding: '20px', borderRadius: '5px' }}>
       <h1 className="text-center">Tiktok Slides Downloader</h1>
-      <h3 className="text-center">Download and Save TikTok Slides Without Watermark.</h3>
+      <h4 className="text-center">Download and Save TikTok Slides Without Watermark.</h4>
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="container video-download-container" style={{ marginTop: '30px' }}>
