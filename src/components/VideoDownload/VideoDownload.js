@@ -15,7 +15,7 @@ const VideoDownload = () => {
     setData(null);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/download-tiktok-video', {
+      const response = await fetch('https://api.avafoods.xyz/api/download-tiktok-video', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
