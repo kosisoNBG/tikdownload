@@ -6,6 +6,13 @@
   text-align: center;
 }
 
+.style {
+  margin-top: 50px;
+  /* margin-left: 10%; */
+  max-width: 80%;
+  /* text-align: center; */
+  justify-self: center;
+}
 /* .jumbotron {
   color: #fff;
   padding: 100px 25px;

@@ -1,0 +1,46 @@
+/* .container {
+    text-align: center;
+    padding: 20px;
+  } */
+  
+.link-group {
+    /* display: flex; */
+    gap: 15px; /* Adjust spacing between links */
+    margin-bottom: 10px;
+    text-align: center;    
+  }
+  
+  .link {
+    text-decoration: none;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    color: white;
+    position: relative;
+    font-size: 18px;;
+  }
+  
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: green;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+  
+  .activeLink {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .active::after {
+    width: 100%;
+  }
+  

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './VideoDownload.css';
-import Articlevid from './Articlevid';
+import './Mp3Download.css';
+import Articlemp3 from './Articlemp3';
 import InlineNav from '../InlineNav/InlineNav';
 
-const VideoDownload = () => {
+const Mp3Download = () => {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
@@ -15,8 +15,9 @@ const VideoDownload = () => {
     setLoading(true);
     setError(null);
     setData(null);
+
     try {
-      const response = await fetch('https://api.avafoods.xyz/api/download-tiktok-video', {
+      const response = await fetch('http://127.0.0.1:5000/api/download-tiktok-mp3', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,13 +58,13 @@ const VideoDownload = () => {
     <div>
 
     <div className="container bg-primary text-white" style={{ padding: '20px', borderRadius: '5px' }}>
-        <h1 className="text-center">Online Tiktok Video Downloader</h1>
-        <h3 className="text-center">Download and Save TikTok Videos Without Watermark.</h3>
+        <h1 className="text-center">Tiktok Mp3 Downloader</h1>
+        <h3 className="text-center">Download and Save TikTok Mp3 for Free.</h3>
         <div className="row justify-content-center">
           <div className="col-md-8">
 
     <div className="container video-download-container" style={{ marginTop: '30px' }}>
-        <InlineNav />
+      <InlineNav />
       <div className="col-md-6 mx-auto" style={{ marginBottom: '20px' }}>
         <form onSubmit={handleSubmit}>
           <div className="input-group mb-3">
@@ -96,13 +97,12 @@ const VideoDownload = () => {
         {loading && <div className="spinner"></div>}
 
         {data && (
-          <div className='col-md-6'>
           <div className="card text-center box-style" style={{ marginTop: '20px' }}>
             <div className="card-header">
               <h3>TikTok Video Results</h3>
             </div>
             <div className="card-body row">
-              <div className="col-md-4">
+              <div className="col-md-4 d-flex flex-column align-items-center">
                 <img src={data.image} alt="User_Avatar" style={{ width: '150px' }} />
                 <h5 className="card-title">{data.username}</h5>
                 <div className="card-text overflow-auto" style={{ height: '100px', maxWidth: '200px', border: '1px solid #ddd', padding: '5px' }}>
@@ -132,15 +132,13 @@ const VideoDownload = () => {
                       Download Server 02
                     </a>
                   )}
-                  <a href="/" className="btn btn-secondary">
+                  <a href="/tiktok-mp3-downloader" className="btn btn-secondary">
                     Download Another Video
                   </a>
                 </span>
               </div>
             </div>
           </div>
-          </div>
-
         )}
 
         {showModal && (
@@ -156,12 +154,12 @@ const VideoDownload = () => {
         )}
       </div>
     </div>
-          </div>
-        </div>
-      </div>
-      <Articlevid />
+    </div>
+</div>
+</div>
+<Articlemp3 />
     </div>
   );
 };
 
-export default VideoDownload;
+export default Mp3Download;
